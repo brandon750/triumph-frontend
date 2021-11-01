@@ -1,0 +1,37 @@
+// Forms
+
+.input-group {
+	margin-bottom: 0.5em;
+	background-color: #414448;
+}
+.page-form {
+	max-width: 700px;
+}
+
+.input-bar::part(base) {
+	background-color: #515360;
+	border: 2px #5b5e6d solid;
+}
+
+.input-select::part(base) {
+	background-color: #515360;
+	border: 2px #5b5e6d solid;
+}
+
+.input-bar::part(base) {
+	color: white;
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+
+.input-bar::part(input) {
+	color: white;
+}
+
+.submit-btn::part(base) {
+	border-radius: 20px;
+	width: 70%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4);
+}

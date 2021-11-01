@@ -1,0 +1,536 @@
+// Base
+
+* {
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	color: var(--base-txt-color);
+	font-family: var(--base-font-family);
+	font-weight: 300;
+	background: var(--body-bg);
+	height: 100vh;
+}
+
+::-webkit-scrollbar {
+	height: 4px;
+	width: 4px;
+	background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgba(255, 255, 255, 0.08);
+	border-radius: 20px;
+}
+
+#root {
+	max-width: 750px;
+	margin: 0 auto auto auto;
+	background: var(--body-bg);
+}
+
+.root-wrap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.3);
+}
+
+// headings ------------
+h1,
+h2,
+h3,
+h5,
+h6 {
+	margin: 0 0 0.5em;
+	color: var(--heading-color);
+}
+
+// links + menu ---------------
+a {
+	color: var(--link-color);
+	text-decoration: none;
+}
+
+// app splash screen -------
+.app-splash {
+	position: fixed;
+	background: var(--body-bg);
+	color: #777;
+	display: flex;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	.app-logo {
+		width: 180px;
+		display: block;
+		margin-bottom: 1em;
+	}
+}
+
+// helper classes ---------
+.calign {
+	text-align: center;
+}
+
+.large-text {
+	font-size: 1.6em;
+}
+
+.brand-color {
+	color: var(--brand-color);
+}
+
+// generic-entry ------------
+.generic-entry {
+	box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.07);
+	border-radius: 5px;
+	margin-bottom: 0.5em;
+	padding: 1em;
+	background: #fff;
+}
+
+// root ---------------
+#root {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	overflow: hidden;
+}
+
+// page --------------------
+.page-content {
+	position: absolute;
+	top: var(--app-header-height);
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow-y: scroll;
+	padding: 1em;
+	&.no-pad {
+		padding: 0;
+	}
+}
+
+.page-centered {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+// sign in + sign up pages ----------
+.signinup-box,
+.signup-box {
+	max-width: 320px;
+	text-align: center;
+}
+
+.signinup-logo {
+	width: 200px;
+	margin-bottom: 1em;
+}
+
+h1 {
+	color: white;
+}
+
+p {
+	color: white;
+}
+
+h2,
+h3,
+h4 {
+	color: white;
+}
+
+#input1.input__control {
+	background: #515360;
+}
+
+.input-group {
+	background: #515360;
+}
+
+.social-btn {
+	width: 25%;
+	height: 100%;
+	margin: auto;
+}
+
+.social-buttons {
+	margin: auto;
+	width: 70%;
+	height: 90px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.social-btn.a {
+	background-image: url("../../static/images/facebook.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+.social-btn.b {
+	background-image: url("../../static/images/google.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+.social-btn.c {
+	background-image: url("../../static/images/instagram.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+.line-divider {
+	width: 15%;
+	height: 1px;
+	background: #919191;
+	border-radius: 50px;
+	margin: auto;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+#TOO-BAD {
+	color: rgb(255, 115, 0);
+}
+
+.page-content a {
+	color: rgb(255, 115, 0);
+}
+
+#signup-header {
+	margin-bottom: 20%;
+}
+
+.input-group.last {
+	margin-bottom: 10%;
+}
+
+// guide page ---------------
+.guide-step {
+	padding: 1em;
+	margin: 1.5em auto;
+	max-width: 600px;
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+.tattoos-grid {
+	display: flex;
+	flex-wrap: wrap;
+	.tattoo-card {
+		width: calc(33.3% - 1em);
+		margin: 0.5em;
+	}
+}
+
+.users-grid-home {
+	display: flex;
+	flex-wrap: wrap;
+	// border: 2px solid red;
+	.user-card {
+		width: 100%;
+		// border: 2px solid blue;
+		// height: 100vh;
+	}
+}
+
+// profile page ---------------
+
+.invis-div {
+	height: 3%;
+}
+
+.profile-divider {
+	width: 100%;
+	height: 1px;
+	background-color: #8a8a8a;
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+.edit-class-btn {
+	position: absolute;
+	z-index: 10;
+	right: 3%;
+	top: 2%;
+}
+
+.edit-class-btn::part(base) {
+	background-color: var(--brand-color);
+	border: none;
+	color: white;
+}
+
+.user-info {
+	text-align: left;
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+
+.other-sports {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 50px;
+	// border: 2px solid red;
+	margin-top: -20px;
+}
+
+.user-info h4 {
+	font-weight: 500;
+}
+
+.profile-bio {
+	font-size: 0.8em;
+}
+
+.profile-availability {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 50px;
+	// border: 2px solid red;
+	margin-top: -20px;
+}
+
+.wk-day {
+	margin: auto;
+	color: #b3b3b3;
+}
+
+.user-info {
+	background: #9d9d9d57;
+	border-radius: 30px 30px 0 0;
+	width: 100vw;
+	margin-left: -4vw;
+	padding: 1em;
+	padding-top: 1.5em;
+	height: 70vh;
+	box-shadow: 0px -20px 30px 0px #1e1e1e80;
+	box-shadow: 0px -2px 1px 0px #ffffff8c;
+}
+
+.btm-nav {
+	z-index: 11;
+	position: fixed;
+	width: 100%;
+	height: 14%;
+	bottom: 0;
+	background-image: url(../../static/images/nav-fade.svg);
+	background-size: contain;
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.btm-nav-btn {
+	margin: auto;
+}
+
+.btm-nav-btn::part(base) {
+	font-size: 1.5em;
+	border: none;
+	color: white;
+	margin-bottom: -30px;
+}
+
+// editProfile styling ---------------
+
+#edit-prof-av::part(base) {
+	box-shadow: 0px 10px 10px 0px #00000040;
+}
+
+.custom-file-upload {
+	z-index: 100;
+	padding: 10px 10px 7px 10px;
+	color: #fff;
+	cursor: pointer;
+	background: var(--brand-color);
+	border-radius: 50%;
+	margin: auto;
+	vertical-align: top;
+}
+
+// #edit-prof-av {
+// 	left: 5vw;
+// }
+
+#location-tag {
+	font-weight: 350;
+}
+
+#rank-text {
+	font-size: 0.75em;
+	margin-top: 2em;
+}
+
+// input[type="file"] {
+// 	display: none;
+// }
+
+.file-btn2 {
+	color: rgb(68, 0, 255);
+}
+
+.input-bar2::part(base) {
+	background-color: #515360;
+	border: 2px #5b5e6d solid;
+}
+
+.input-bar2::part(base) {
+	color: white;
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+
+.input-bar2.b::part(base) {
+	color: white;
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+
+.input-bar2.b::part(textarea) {
+	color: white;
+}
+
+.input-bar2::part(input) {
+	color: white;
+}
+
+.submit-btn2::part(base) {
+	box-shadow: 0px 10px 10px 0px #0000001e;
+}
+
+.selector {
+	position: fixed;
+	width: 100vw;
+	height: 20vh;
+	top: 80%;
+}
+
+.nav-fade {
+	width: 100%;
+	margin-top: 1px;
+	height: 70%;
+	background-image: url(../../static/images/nav-fade.svg);
+	background-size: cover;
+	position: absolute;
+	top: 80%;
+	bottom: 0;
+}
+
+.decline-button:active {
+	width: 72px;
+	height: 72px;
+}
+
+.settingsHeader {
+	color: #fff;
+	font-weight: 400;
+	font-size: 1.3em;
+	margin-bottom: 1em;
+}
+
+.switchDiv {
+	background-color: #6e6e6e;
+	border-radius: 30px;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0.5em;
+	margin-bottom: 1em;
+}
+
+.switchDiv p {
+	margin: auto;
+	padding: 1em;
+	color: #2f3235;
+}
+
+.settingsFakeLink:hover {
+	color: var(--brand-color);
+	transition: 0.2s;
+}
+
+.switchDivSwitch {
+	margin: auto;
+}
+
+.settingsFakeLink {
+	color: #fff;
+	margin-bottom: 1em;
+}
+
+.settingsLogOut {
+	color: #fff;
+	background: var(--brand-color);
+	border-radius: 25px;
+	padding: 1em;
+	width: 40%;
+	display: flex;
+	box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.2);
+	margin: auto;
+	margin-top: 2em;
+}
+
+.settingsLogOut:hover {
+	transform: scale(1.05);
+	transition: 0.2s;
+}
+
+.settingsLogOut p {
+	margin: auto;
+	font-weight: 400;
+}
+
+.flash {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(255, 255, 255, 0);
+	// z-index: 10;
+	animation: flashAnim 0.4s ease;
+}
+
+@keyframes flashAnim {
+	0% {
+		background: rgba(255, 255, 255, 0);
+	}
+	50% {
+		background: #414448;
+	}
+
+	100% {
+		background: rgba(255, 255, 255, 0);
+	}
+}
+
+// RESPONSIVE - MOBILE -------------------
+// @media all and (max-width: 768px) {
+// 	.signinup-box {
+// 		width: 90%;
+// 		max-width: none;
+// 	}
+// }
